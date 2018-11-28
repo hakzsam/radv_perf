@@ -27,9 +27,9 @@ class Dota2(Benchmark):
     def bench(self):
         for i in range(0, self._iterations):
             self.run()
-            self._fps.append(self._get_fps())
+            self._fps.append(self.get_fps())
 
-    def _get_fps(self):
+    def get_fps(self):
         log_file = self._game_path + "/game/dota/Source2Bench.csv"
         with open(log_file) as f:
             data = f.readlines()
@@ -46,6 +46,17 @@ class Dota2(Benchmark):
     def get_avg_fps(self):
         return sum(self._fps) / self._iterations
 
+    def get_results(self):
+        results = {}
+        results['avg_fps'] = str(self.get_avg_fps())
+        results['min_fps'] = str(self.get_min_fps())
+        results['max_fps'] = str(self.get_max_fps())
+        results['iterations'] = str(self._iterations)
+        return results
+
+    def print_results(self):
+        print(self.get_results())
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Dota2 benchmark")
     parser.add_argument('--iterations', type=int, default=3)
@@ -56,7 +67,4 @@ if __name__ == "__main__":
     if args.dry_run:
         dota2.run() # For compiling pipelines
     dota2.bench()
-    min_fps = dota2.get_min_fps()
-    max_fps = dota2.get_max_fps()
-    avg_fps = dota2.get_avg_fps()
-    print("Dota2 (avg: %s, min: %s, max: %s)" % (str(avg_fps), str(min_fps), str(max_fps)))
+    dota2.print_results()
