@@ -5,10 +5,9 @@ import os
 import shutil
 import sys
 
-from enum import Enum
-
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), ".."))
 
+from enum import Enum
 from Benchmark import *
 from Util import *
 
@@ -36,7 +35,7 @@ class F12017(Benchmark):
         Benchmark.__init__(self, "F12017")
         self._game_path = os.environ['HOME'] + "/work/Steam/steamapps/common/F1 2017"
         self._conf_path = os.environ['HOME'] + "/.local/share/feral-interactive/F1 2017/"
-        self._log_path = os.environ['HOME'] + "/.local/share/feral-interactive/F1 2017/SaveData/feral_bench"
+        self._log_path = self._conf_path + "SaveData/feral_bench"
         self._resolution = resolution
         self._preset = preset
         self._antialiasing = antialiasing
@@ -212,7 +211,7 @@ class F12017(Benchmark):
     def get_avg_fps(self):
         return sum(self._fps) / self._iterations
 
-    def print_results(self):
+    def get_results(self):
         results = {}
         results['resolution'] = str(self._resolution)
         results['preset'] = str(self._preset)
@@ -221,7 +220,10 @@ class F12017(Benchmark):
         results['min_fps'] = str(self.get_min_fps())
         results['max_fps'] = str(self.get_max_fps())
         results['iterations'] = str(self._iterations)
-        print(results)
+        return results
+
+    def print_results(self):
+        print(self.get_results())
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="F12017 benchmark")
