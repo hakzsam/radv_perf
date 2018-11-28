@@ -156,7 +156,6 @@ class ToB(Benchmark):
         os.chdir(olddir)
 
     def bench(self):
-        self.install()
         for i in range(0, self._iterations):
             self.run()
             self._fps.append(self.get_fps())
@@ -214,5 +213,6 @@ if __name__ == "__main__":
     args = parser.parse_args(sys.argv[1:])
 
     tob = ToB(args.resolution, args.preset, args.iterations)
+    tob.install()
     tob.bench()
     tob.print_results()

@@ -23,7 +23,7 @@ class Benchmark:
         self.num_results = 1
 
     def run_process(self, cmd, stdout = DEVNULL, stderr = DEVNULL):
-        process = subprocess.Popen(cmd) #, stderr=stderr, stdout=stdout)
+        process = subprocess.Popen(cmd, stderr=stderr, stdout=stdout)
         process.wait()
         return process
 
