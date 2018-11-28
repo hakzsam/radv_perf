@@ -6,10 +6,9 @@ import os
 import shutil
 import sys
 
-from enum import Enum
-
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), ".."))
 
+from enum import Enum
 from Benchmark import *
 from Util import *
 
@@ -30,7 +29,7 @@ class ToB(Benchmark):
         Benchmark.__init__(self, "ToB")
         self._game_path = os.environ['HOME'] + "/work/Steam/steamapps/common/Total War Saga Thrones of Britannia"
         self._conf_path = os.environ['HOME'] + "/.local/share/feral-interactive/Thrones of Britannia/"
-        self._log_path = os.environ['HOME'] + "/.local/share/feral-interactive/Thrones of Britannia/VFS/User/AppData/Roaming/The Creative Assembly/ThronesofBritannia/benchmarks/"
+        self._log_path = self._conf_path + "VFS/User/AppData/Roaming/The Creative Assembly/ThronesofBritannia/benchmarks/"
         self._resolution = resolution
         self._preset = preset
         self._iterations = iterations
@@ -157,11 +156,12 @@ class ToB(Benchmark):
         os.chdir(olddir)
 
     def bench(self):
+        self.install()
         for i in range(0, self._iterations):
             self.run()
-            self._fps.append(self._get_fps())
+            self._fps.append(self.get_fps())
 
-    def _get_fps(self):
+    def get_fps(self):
         all_files = glob.glob(self._log_path + "/benchmark_*")
         list_of_files = []
         # Exclude some files.
@@ -190,7 +190,7 @@ class ToB(Benchmark):
     def get_avg_fps(self):
         return sum(self._fps) / self._iterations
 
-    def print_results(self):
+    def get_results(self):
         results = {}
         results['resolution'] = str(self._resolution)
         results['preset'] = str(self._preset)
@@ -198,7 +198,10 @@ class ToB(Benchmark):
         results['min_fps'] = str(self.get_min_fps())
         results['max_fps'] = str(self.get_max_fps())
         results['iterations'] = str(self._iterations)
-        print(results)
+        return results
+
+    def print_results(self):
+        print(self.get_results())
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="ToB benchmark")
@@ -211,6 +214,5 @@ if __name__ == "__main__":
     args = parser.parse_args(sys.argv[1:])
 
     tob = ToB(args.resolution, args.preset, args.iterations)
-    tob.install()
     tob.bench()
     tob.print_results()
