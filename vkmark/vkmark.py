@@ -12,14 +12,14 @@ from Benchmark import *
 # Vkmark benchmark.
 ##
 class Vkmark(Benchmark):
-    def __init__(self, num_iterations, size):
+    def __init__(self, resolution, iterations):
         Benchmark.__init__(self, "Vkmark")
         self._path = os.environ['HOME'] + "/programming/vkmark"
-        self._num_iterations = num_iterations
-        self._size = size
+        self._resolution = resolution
+        self._iterations = iterations
         self._scores = []
 
-    def _get_score(self, logfile):
+    def get_score(self, logfile):
         with open(logfile) as f:
             for line in f:
                 if "vkmark Score:" in line:
@@ -30,15 +30,15 @@ class Vkmark(Benchmark):
     def bench(self):
         olddir = os.getcwd()
         os.chdir(self._path + "/build")
-        for i in range(0, self._num_iterations):
+        for i in range(0, self._iterations):
             logfile = tempfile.mktemp()
             stdout = open(logfile, "w+")
             cmd = ["src/vkmark",
                    "--winsys-dir=src",
                    "--data-dir=../data",
-                   "--size=" + self._size]
+                   "--size=" + self._resolution]
             self.run_process(cmd, stdout)
-            self._scores.append(self._get_score(logfile))
+            self._scores.append(self.get_score(logfile))
         os.chdir(olddir)
 
     def get_min_score(self):
@@ -48,7 +48,19 @@ class Vkmark(Benchmark):
         return max(self._scores)
 
     def get_avg_score(self):
-        return sum(self._scores) / self._num_iterations
+        return sum(self._scores) / self._iterations
+
+    def get_results(self):
+        results = {}
+        results['resolution'] = str(self._resolution)
+        results['avg_fps'] = str(self.get_avg_score())
+        results['min_fps'] = str(self.get_min_score())
+        results['max_fps'] = str(self.get_max_score())
+        results['iterations'] = str(self._iterations)
+        return results
+
+    def print_results(self):
+        print(self.get_results())
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Vkmark benchmark")
@@ -57,9 +69,6 @@ if __name__ == "__main__":
                         choices=['1920x1080', '2560x1440', '3840x2160'])
     args = parser.parse_args(sys.argv[1:])
 
-    vkmark = Vkmark(args.iterations, args.resolution)
+    vkmark = Vkmark(args.resolution, args.iterations)
     vkmark.bench()
-    min_score = vkmark.get_min_score()
-    max_score = vkmark.get_max_score()
-    avg_score = vkmark.get_avg_score()
-    print("Vkmark (avg: %s, min: %s, max: %s)" % (str(avg_score), str(min_score), str(max_score)))
+    vkmark.print_results()
