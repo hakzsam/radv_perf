@@ -33,7 +33,7 @@ class TW2(Benchmark):
     def __init__(self, resolution, preset, scene, iterations):
         Benchmark.__init__(self, "TW2")
         self._game_path = os.environ['HOME'] + "/work/Steam/steamapps/common/Total War WARHAMMER II"
-        self._conf_path = os.environ['HOME'] + "/.local/share/feral-interactive/Total War WARHAMMER II"
+        self._conf_path = os.environ['HOME'] + "/.local/share/feral-interactive/Total War WARHAMMER II/"
         self._log_path = self._conf_path + "/SaveData/Steam Saves (327368460)/benchmarks"
         self._resolution = resolution
         self._preset = preset
@@ -48,8 +48,8 @@ class TW2(Benchmark):
     def install(self):
         conf = {}
         n = self._resolution.find('x')
-        conf['@ScreenW@']=self._resolution[:n]
-        conf['@ScreenH@']=self._resolution[n+1:]
+        conf['@screen_width@']=self._resolution[:n]
+        conf['@screen_height@']=self._resolution[n+1:]
         if self._preset == TW2_preset.LOW:
             conf['@gfx_aa@']='0'
             conf['@gfx_building_quality@']='0'

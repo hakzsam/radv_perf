@@ -34,6 +34,11 @@
                         <value name="SkipDriverWarnings" type="integer">1</value>
                         <value name="SkipOSWarnings" type="integer">1</value>
 
+                        <key name="SpecificationAlerts">
+                            <!-- NOTE: Un-comment this if comparing the effects of the CPU governor -->
+                            <value name="LnxCPUGovernorSubOptimal" type="integer">1</value>
+                        </key>
+
                         <key name="GraphicsSettings">
                             <value name="gfx_aa" type="integer">@gfx_aa@</value>
                             <value name="gfx_alpha_blend" type="integer">0</value>
@@ -67,12 +72,6 @@
                             <value name="porthole_3d" type="integer">@porthole_3d@</value>
                         </key>
                     </key>
-                </key>
-            </key>
-            <key name="MacDoze">
-                <key name="Config">
-                    <value name="ExtraCommandLine" type="string">game_startup_mode benchmark_auto_quit script/benchmarks/@benchmark_name@</value>
-                    <value name="ExtraCommandLineEnabled" type="integer">1</value>
                 </key>
             </key>
         </key>
