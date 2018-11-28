@@ -78,6 +78,7 @@ class Talos(Benchmark):
 
     def get_results(self):
         results = {}
+        results['app'] = str(self.name)
         results['resolution'] = str(self._resolution)
         results['avg_fps'] = str(self.get_avg_fps())
         results['min_fps'] = str(self.get_min_fps())

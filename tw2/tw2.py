@@ -183,6 +183,7 @@ class TW2(Benchmark):
 
     def get_results(self):
         results = {}
+        results['app'] = str(self.name)
         results['resolution'] = str(self._resolution)
         results['preset'] = str(self._preset)
         results['scene'] = str(self._scene)

@@ -123,6 +123,7 @@ class ROTR(Benchmark):
 
     def print_results(self):
         results = {}
+        results['app'] = str(self.name)
         results['resolution'] = str(self._resolution)
         results['preset'] = str(self._preset)
         results['antialiasing'] = str(self._antialiasing)
