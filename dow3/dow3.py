@@ -5,10 +5,9 @@ import os
 import shutil
 import sys
 
-from enum import Enum
-
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), ".."))
 
+from enum import Enum
 from Benchmark import *
 
 ##
@@ -28,7 +27,7 @@ class DOW3(Benchmark):
         Benchmark.__init__(self, "DOW3")
         self._game_path = os.environ['HOME'] + "/work/Steam/steamapps/common/Dawn of War III"
         self._conf_path = os.environ['HOME'] + "/.local/share/feral-interactive/Dawn of War III/"
-        self._log_path = os.environ['HOME'] + "/.local/share/feral-interactive/Dawn of War III/VFS/User/AppData/Roaming/My Games/Dawn of War III/LogFiles/"
+        self._log_path = self._conf_path + "VFS/User/AppData/Roaming/My Games/Dawn of War III/LogFiles/"
         self._preset = str(preset)
         self._iterations = iterations
         self._fps = []
@@ -53,11 +52,10 @@ class DOW3(Benchmark):
     def bench(self, dry_run = False):
         for i in range(0, self._iterations):
             self.run()
-            self._fps.append(self._get_fps())
+            self._fps.append(self.get_fps())
 
-    def _get_fps(self):
+    def get_fps(self):
         log_file = self.get_latest_file(self._log_path)
-
         with open(log_file, "r") as f:
             for line in f:
                 if "average fps" in line:
@@ -74,6 +72,18 @@ class DOW3(Benchmark):
     def get_avg_fps(self):
         return sum(self._fps) / self._iterations
 
+    def get_results(self):
+        results = {}
+        results['preset'] = str(self._preset)
+        results['avg_fps'] = str(self.get_avg_fps())
+        results['min_fps'] = str(self.get_min_fps())
+        results['max_fps'] = str(self.get_max_fps())
+        results['iterations'] = str(self._iterations)
+        return results
+
+    def print_results(self):
+        print(self.get_results())
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Dawn of War III benchmark")
     parser.add_argument('--iterations', type=int, default=3)
@@ -88,7 +98,4 @@ if __name__ == "__main__":
     if args.dry_run:
         dow3.run() # For compiling pipelines
     dow3.bench()
-    min_fps = dow3.get_min_fps()
-    max_fps = dow3.get_max_fps()
-    avg_fps = dow3.get_avg_fps()
-    print("DOW3 (avg: %s, min: %s, max: %s)" % (str(avg_fps), str(min_fps), str(max_fps)))
+    dow3.print_results()
