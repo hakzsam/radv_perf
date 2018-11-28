@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registry>
+    <key name="HKEY_CLASSES_ROOT">
+    </key>
+    <key name="HKEY_CURRENT_CONFIG">
+    </key>
+    <key name="HKEY_CURRENT_USER">
+        <key name="Software">
+            <key name="Feral Interactive">
+                <key name="Thrones of Britannia">
+                    <key name="Setup">
+                        <!-- screen resolutions -->
+                        <value name="ScreenH" type="integer">@ScreenH@</value>
+                        <value name="ScreenW" type="integer">@ScreenW@</value>
+
+                        <value name="FullScreen" type="integer">1</value>
+
+                        <!-- disable all forms of pausing -->
+                        <value name="PauseMoviesOnPause" type="integer">0</value>
+                        <value name="PauseOnSuspend" type="integer">0</value>
+                        <value name="PauseSoundOnPause" type="integer">0</value>
+                        <value name="PauseTimersOnPause" type="integer">0</value>
+                        <value name="AllowPausing" type="integer">0</value>
+
+                        <!-- don't send data without consent -->
+                        <value name="AllowSendUsageData" type="integer">0</value>
+
+                        <!-- stop the game options dialogue showing -->
+                        <value name="GameOptionsDialogShouldShow" type="integer">0</value>
+                        <value name="GameOptionsDialogShouldShowBigPicture" type="integer">0</value>
+                        <value name="GameOptionsDialogShown" type="integer">1</value>
+
+                        <!-- stop any potential warnings -->
+                        <value name="SoftwareUpdatedAskedUser" type="integer">1</value>
+                        <value name="SoftwareUpdatedCanCheck" type="integer">0</value>
+                        <value name="SkipDriverWarnings" type="integer">1</value>
+                        <value name="SkipOSWarnings" type="integer">1</value>
+                        <key name="SpecificationAlerts">
+                            <!-- NOTE: Un-comment this if comparing the effects of the CPU governor -->
+                            <value name="LnxCPUGovernorSubOptimal" type="integer">1</value>
+                        </key>
+                        
+                        <!-- surpress per device graphics settings, otherwise the settings below will be ignored  -->
+                        <value name="SeenSpecificationAlertUUIDPerRendererMappedSettings" type="integer">1</value>
+
+                        <key name="GraphicsSettings">
+                        <!-- Default Graphics Settings -->
+                            <value name="gfx_aa" type="integer">@gfx_aa@</value>
+                            <value name="gfx_building_quality" type="integer">@gfx_building_quality@</value>
+                            <value name="gfx_depth_of_field" type="integer">@gfx_depth_of_field@</value>
+                            <value name="gfx_distortion" type="integer">@gfx_distortion@</value>
+                            <value name="gfx_effects_quality" type="integer">@gfx_effects_quality@</value>
+                            <value name="gfx_fleet_size" type="integer">@gfx_fleet_size@</value>
+                            <value name="gfx_grass_quality" type="integer">@gfx_grass_quality@</value>
+                            <value name="gfx_screen_space_reflections" type="integer">@gfx_screen_space_reflections@</value>
+                            <value name="gfx_shadow_quality" type="integer">@gfx_shadow_quality@</value>
+                            <value name="gfx_sky_quality" type="integer">@gfx_sky_quality@</value>
+                            <value name="gfx_ssao" type="integer">@gfx_ssao@</value>
+                            <value name="gfx_terrain_quality" type="integer">@gfx_terrain_quality@</value>
+                            <value name="gfx_texture_filtering" type="integer">@gfx_texture_filtering@</value>
+                            <value name="gfx_texture_quality" type="integer">@gfx_texture_quality@</value>
+                            <value name="gfx_tree_quality" type="integer">@gfx_tree_quality@</value>
+                            <value name="gfx_unit_quality" type="integer">@gfx_unit_quality@</value>
+                            <value name="gfx_unit_size" type="integer">@gfx_unit_size@</value>
+                            <value name="gfx_water_quality" type="integer">@gfx_water_quality@</value>
+
+                        <!-- VSync off to avoid monitor refresh-rate changing results -->
+                            <value name="gfx_vsync"       type="integer">0</value>
+                        </key>
+                    </key>
+                </key>
+            </key>
+            <key name="MacDoze">
+                <key name="Config">
+                    <value name="ExtraCommandLine" type="string">gfx_first_run false; game_startup_mode benchmark_auto_quit Script/Benchmarks/SiegeOfWintanceaster/SiegeOfWintanceaster.xml</value>
+                    <value name="ExtraCommandLineEnabled" type="integer">1</value>
+                </key>
+            </key>
+        </key>
+    </key>
+</registry>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registry>
+    <key name="HKEY_CLASSES_ROOT">
+    </key>
+    <key name="HKEY_CURRENT_CONFIG">
+    </key>
+    <key name="HKEY_CURRENT_USER">
+        <key name="Software">
+            <key name="Feral Interactive">
+                <key name="F1 2017">
+                    <key name="Setup">
+                        <!-- gfs_config settings -->
+                        <value name="gfxconfig_advanced_smoke_shadows" type="string">ADVANCED_SMOKE_SHADOWS</value>
+                        <value name="gfxconfig_ambient_occlusion" type="string">AMBIENT_OCCLUSION</value>
+                        <value name="gfxconfig_crowd" type="string">CROWD</value>
+                        <value name="gfxconfig_dynamic_hair" type="string">DYNAMIC_HAIR</value>
+                        <value name="gfxconfig_ground_cover" type="string">GROUND_COVER</value>
+                        <value name="gfxconfig_hdr_mode" type="integer">HDR_MODE</value>
+                        <value name="gfxconfig_lighting" type="string">LIGHTING</value>
+                        <value name="gfxconfig_mirrors" type="string">MIRRORS</value>
+                        <value name="gfxconfig_particles" type="string">PARTICLES</value>
+                        <value name="gfxconfig_postprocess" type="string">POSTPROCESS</value>
+                        <value name="gfxconfig_screen_space_reflections" type="string">SCREEN_SPACE_REFLECTIONS</value>
+                        <value name="gfxconfig_shadows" type="string">SHADOWS</value>
+                        <value name="gfxconfig_skidmarks" type="string">SKIDMARKS</value>
+                        <value name="gfxconfig_skidmarks_blending" type="string">SKIDMARKS_BLENDING</value>
+                        <value name="gfxconfig_smoke_shadows" type="string">SMOKE_SHADOWS</value>
+                        <value name="gfxconfig_ssrt_shadows" type="string">SSRT_SHADOWS</value>
+                        <value name="gfxconfig_texture_streaming" type="string">TEXTURE_STREAMING</value>
+                        <value name="gfxconfig_vehicle_reflections" type="string">VEHICLE_REFLECTIONS</value>
+                        <value name="gfxconfig_weather_effects" type="string">WEATHER_EFFECTS</value>
+
+                        <value name="gfxconfig_antialiasing" type="string">ANTIALIASING</value>
+
+                        <!-- screen resolutions -->
+                        <value name="ScreenH" type="integer">RESOLUTION_HEIGHT</value>
+                        <value name="ScreenW" type="integer">RESOLUTION_WIDTH</value>
+                        <value name="FullScreen" type="integer">1</value>
+
+                        <!-- disable all forms of pausing -->
+                        <value name="PauseMoviesOnPause" type="integer">0</value>
+                        <value name="PauseOnSuspend" type="integer">0</value>
+                        <value name="PauseSoundOnPause" type="integer">0</value>
+                        <value name="PauseTimersOnPause" type="integer">0</value>
+                        <value name="AllowPausing" type="integer">0</value>
+
+                        <!-- don't send data without consent -->
+                        <value name="AllowSendUsageData" type="integer">0</value>
+
+                        <!-- stop any potential warnings -->
+                        <value name="GameOptionsDialogShouldShow" type="integer">0</value>
+                        <value name="GameOptionsDialogShouldShowBigPicture" type="integer">0</value>
+                        <value name="GameOptionsDialogShown" type="integer">1</value>
+                        <value name="SeenSpecificationAlertUUIDDefaultHardwareSpecificationsClass" type="integer">1</value>
+                        <value name="SoftwareUpdatedAskedUser" type="integer">1</value>
+                        <value name="SoftwareUpdatedCanCheck" type="integer">0</value>
+                        <key name="SpecificationAlerts">
+                            <value name="amdDriverUnsupported" type="integer">1</value>
+                            <value name="LnxCPUGovernorSubOptimal" type="integer">1</value>
+                            <value name="LnxDistributionUnsupported" type="integer">1</value>
+                            <value name="NewRecommendedSettingsAlertShown" type="integer">1</value>
+                        </key>
+                    </key>
+                </key>
+            </key>
+        </key>
+    </key>
+</registry>

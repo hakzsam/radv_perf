@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registry>
+    <key name="HKEY_CLASSES_ROOT">
+    </key>
+    <key name="HKEY_CURRENT_CONFIG">
+    </key>
+    <key name="HKEY_CURRENT_USER">
+        <key name="Software">
+            <key name="Feral Interactive">
+                <key name="Rise of the Tomb Raider">
+                    <key name="Setup">
+                        <!-- screen resolutions -->
+                        <value name="ScreenH" type="integer">@ScreenH@</value>
+                        <value name="ScreenW" type="integer">@ScreenW@</value>
+
+                        <value name="FullScreen" type="integer">1</value>
+
+                        <value name="QuitAfterBenchmark" type="integer">1</value>
+
+                        <!-- disable all forms of pausing -->
+                        <value name="PauseMoviesOnPause" type="integer">0</value>
+                        <value name="PauseOnSuspend" type="integer">0</value>
+                        <value name="PauseSoundOnPause" type="integer">0</value>
+                        <value name="PauseTimersOnPause" type="integer">0</value>
+                        <value name="AllowPausing" type="integer">0</value>
+
+                        <!-- don't send data without consent -->
+                        <value name="AllowSendUsageData" type="integer">0</value>
+
+                        <!-- stop the game options dialogue showing -->
+                        <value name="GameOptionsDialogShouldShow" type="integer">0</value>
+                        <value name="GameOptionsDialogShouldShowBigPicture" type="integer">0</value>
+                        <value name="GameOptionsDialogShown" type="integer">1</value>
+
+                        <!-- stop any potential warnings -->
+                        <value name="SoftwareUpdatedAskedUser" type="integer">1</value>
+                        <value name="SoftwareUpdatedCanCheck" type="integer">0</value>
+                        <value name="SkipDriverWarnings" type="integer">1</value>
+                        <value name="SkipOSWarnings" type="integer">1</value>
+                        <key name="SpecificationAlerts">
+                            <!-- NOTE: Un-comment this if comparing the effects of the CPU governor -->
+                            <value name="LnxCPUGovernorSubOptimal" type="integer">1</value>
+                        </key>
+
+                        <!-- Default Graphics Settings -->
+                        <value name="SkipDefaultSettings" type="integer">1</value>
+                        <value name="ForceDefaultPreset"  type="integer">1</value>
+                        <value name="DefaultPreset"       type="string">@DefaultPreset@</value>
+                        <value name="DefaultAntialiasing" type="integer">@DefaultAntialiasing@</value>
+
+                        <!-- VSync off to avoid monitor refresh-rate changing results -->
+                        <value name="DefaultVSync"        type="integer">0</value>
+                    </key>
+                </key>
+            </key>
+            <key name="MacDoze">
+                <key name="Config">
+                    <value name="ExtraCommandLine" type="string">-benchmark</value>
+                    <value name="ExtraCommandLineEnabled" type="integer">1</value>
+                </key>
+            </key>
+        </key>
+    </key>
+</registry>

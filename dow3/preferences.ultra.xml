@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registry>
+    <key name="HKEY_CLASSES_ROOT">
+    </key>
+    <key name="HKEY_CURRENT_CONFIG">
+    </key>
+    <key name="HKEY_CURRENT_USER">
+        <key name="Software">
+            <key name="Feral Interactive">
+                <key name="Dawn of War III">
+                    <key name="Setup">
+                        <value name="AddSteamCloudAlias" type="integer">1</value>
+                        <value name="AdjustResolution" type="integer">0</value>
+                        <value name="AllowPausing" type="integer">0</value>
+                        <value name="AllowSendUsageData" type="integer">0</value>
+                        <value name="AllowVulkanCheckbox" type="integer">1</value>
+                        <value name="AvoidSwapInjectionDuringPGOW" type="integer">1</value>
+                        <value name="ConstrainLiveWindowResize" type="integer">1</value>
+                        <value name="default_ambocclquality" type="integer">2</value>
+                        <value name="default_antialiasing" type="integer">1</value>
+                        <value name="default_deflicker" type="integer">1</value>
+                        <value name="default_effectsdensity" type="integer">3</value>
+                        <value name="default_effectsfidelity" type="integer">4</value>
+                        <value name="default_graphicsquality" type="integer">4</value>
+                        <value name="default_modeldetail" type="integer">511</value>
+                        <value name="default_physics" type="integer">3</value>
+                        <value name="default_postprocessing" type="integer">1</value>
+                        <value name="default_raindetail" type="integer">2</value>
+                        <value name="default_reflections" type="integer">1</value>
+                        <value name="default_shadowfilter" type="integer">1</value>
+                        <value name="default_shadows" type="integer">4</value>
+                        <value name="default_showunitocclusion" type="integer">1</value>
+                        <value name="default_snowdetail" type="integer">3</value>
+                        <value name="default_terraindetail" type="integer">2</value>
+                        <value name="default_texturedetail" type="integer">1</value>
+                        <value name="default_verticalsync" type="integer">0</value>
+                        <value name="default_volumetriclighting" type="integer">3</value>
+                        <value name="default_worldviewquality" type="integer">2</value>
+                        <value name="DesktopFeatures" type="integer">1</value>
+                        <value name="DoneMinOS" type="integer">0</value>
+                        <value name="DonePromotional" type="integer">0</value>
+                        <value name="DoneUnsupported" type="integer">0</value>
+                        <value name="EnableAsyncRenderThread" type="integer">1</value>
+                        <value name="FullScreen" type="integer">1</value>
+                        <value name="GameDestroysWindow" type="integer">0</value>
+                        <value name="GameOptionsDialogLastTab" type="integer">20000</value>
+                        <value name="GameOptionsDialogShouldShow" type="integer">0</value>
+                        <value name="GameOptionsDialogShouldShowBigPicture" type="integer">0</value>
+                        <value name="GameOptionsDialogShown" type="integer">1</value>
+                        <value name="gfxconfig_ambocclquality" type="integer">2</value>
+                        <value name="gfxconfig_antialiasing" type="integer">1</value>
+                        <value name="gfxconfig_deflicker" type="integer">1</value>
+                        <value name="gfxconfig_effectsdensity" type="integer">3</value>
+                        <value name="gfxconfig_effectsfidelity" type="integer">3</value>
+                        <value name="gfxconfig_graphicsquality" type="integer">5</value>
+                        <value name="gfxconfig_modeldetail" type="integer">511</value>
+                        <value name="gfxconfig_physics" type="integer">3</value>
+                        <value name="gfxconfig_postprocessing" type="integer">1</value>
+                        <value name="gfxconfig_raindetail" type="integer">2</value>
+                        <value name="gfxconfig_reflections" type="integer">1</value>
+                        <value name="gfxconfig_shadowfilter" type="integer">2</value>
+                        <value name="gfxconfig_shadows" type="integer">4</value>
+                        <value name="gfxconfig_showunitocclusion" type="integer">1</value>
+                        <value name="gfxconfig_snowdetail" type="integer">3</value>
+                        <value name="gfxconfig_terraindetail" type="integer">3</value>
+                        <value name="gfxconfig_texturedetail" type="integer">0</value>
+                        <value name="gfxconfig_verticalsync" type="integer">0</value>
+                        <value name="gfxconfig_volumetriclighting" type="integer">3</value>
+                        <value name="gfxconfig_worldviewquality" type="integer">2</value>
+                        <value name="LiveWindowResizePercentage" type="integer">0</value>
+                        <value name="LiveWindowResizeThreshold" type="integer">0</value>
+                        <value name="MinWindowedHeight" type="integer">0</value>
+                        <value name="MinWindowedWidth" type="integer">0</value>
+                        <value name="PauseiTunes" type="integer">0</value>
+                        <value name="PauseMoviesOnPause" type="integer">0</value>
+                        <value name="PauseOnSuspend" type="integer">0</value>
+                        <value name="PauseSoundOnPause" type="integer">0</value>
+                        <value name="PauseTimersOnPause" type="integer">0</value>
+                        <value name="QuitClosesWindow" type="integer">1</value>
+                        <value name="RestoreMouseOnSuspend" type="integer">1</value>
+                        <value name="RestoreResOnSuspend" type="integer">1</value>
+                        <value name="RunEvenIfNotEnoughVRAM" type="integer">0</value>
+                        <value name="ScreenH" type="integer">1080</value>
+                        <value name="ScreenW" type="integer">1920</value>
+                        <value name="SecsBeforePause" type="integer">40</value>
+                        <value name="SeenSpecificationAlertUUIDDefaultHardwareSpecificationsClass" type="integer">1</value>
+                        <value name="SetiChatAway" type="integer">0</value>
+                        <value name="ShowAssertAlerts" type="integer">0</value>
+                        <value name="ShowTheHideDockCheckbox" type="integer">0</value>
+                        <value name="SoftwareUpdatedAskedUser" type="integer">1</value>
+                        <value name="SoftwareUpdatedCanCheck" type="integer">1</value>
+                        <value name="SpecificationLastUpdateCheckTime" type="binary">7817fd5b00000000</value>
+                        <value name="SpecificationUpdateURL" type="string">https://u1.feralinteractive.com/autoupdate/dawnofwar3/specifications_linux_1_0_5.xml</value>
+                        <value name="UpdateServerDomain" type="string">u1.feralinteractive.com</value>
+                        <value name="UpdateServerPath" type="string">/autoupdate/</value>
+                        <value name="UpdateServerProtocol" type="string">https://</value>
+                        <value name="UseFeralDynamicBuffer" type="integer">1</value>
+                        <value name="UseGlobalWorkerLocking" type="integer">1</value>
+                        <key name="SpecificationAlerts">
+                            <value name="DriverUnsupportedCheck" type="integer">1</value>
+                            <value name="LnxCPUGovernorSubOptimal" type="integer">1</value>
+                        </key>
+                    </key>
+                </key>
+            </key>
+            <key name="IndirectX">
+                <key name="Direct3D">
+                    <key name="Config">
+                        <value name="AllowD3D1x" type="integer">1</value>
+                        <value name="AllowSM5" type="integer">1</value>
+                        <value name="EnableBindlessTexture" type="integer">2</value>
+                        <value name="FSAALevel" type="integer">0</value>
+                        <value name="UsedVertexShaderSSBOBlocks" type="integer">1</value>
+                        <value name="UseFastDivByZero" type="integer">1</value>
+                        <value name="UseImmediateDiscard" type="integer">1</value>
+                        <value name="UseVulkan" type="integer">1</value>
+                        <value name="VulkanUseSeparatePresentSubmission" type="integer">1</value>
+                    </key>
+                </key>
+                <key name="DirectDraw">
+                    <key name="Config">
+                        <value name="BlankAllScreens" type="integer">1</value>
+                    </key>
+                </key>
+            </key>
+            <key name="MacDoze">
+                <key name="Config">
+                    <value name="GameCannotQuit" type="integer">1</value>
+                    <value name="RemapCommandToControl" type="integer">1</value>
+                </key>
+            </key>
+        </key>
+    </key>
+    <key name="HKEY_LOCAL_MACHINE">
+        <key name="Software">
+        </key>
+    </key>
+    <key name="HKEY_USERS">
+    </key>
+</registry>

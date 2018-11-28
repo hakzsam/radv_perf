@@ -1,0 +1,33 @@
+RADV:
+{'resolution': '1920x1080', 'preset': 'ultralow', 'antialiasing': 'taa', 'avg_fps': '126.0', 'min_fps': '126.0', 'max_fps': '126.0', 'iterations': '1'}
+{'resolution': '1920x1080', 'preset': 'low', 'antialiasing': 'taa', 'avg_fps': '116.0', 'min_fps': '116.0', 'max_fps': '116.0', 'iterations': '1'}
+{'resolution': '1920x1080', 'preset': 'medium', 'antialiasing': 'taa', 'avg_fps': '109.0', 'min_fps': '109.0', 'max_fps': '109.0', 'iterations': '1'}
+{'resolution': '1920x1080', 'preset': 'high', 'antialiasing': 'taa', 'avg_fps': '100.0', 'min_fps': '100.0', 'max_fps': '100.0', 'iterations': '1'}
+{'resolution': '1920x1080', 'preset': 'ultrahigh', 'antialiasing': 'taa', 'avg_fps': '82.0', 'min_fps': '82.0', 'max_fps': '82.0', 'iterations': '1'}
+{'resolution': '2560x1440', 'preset': 'ultralow', 'antialiasing': 'taa', 'avg_fps': '127.0', 'min_fps': '127.0', 'max_fps': '127.0', 'iterations': '1'}
+{'resolution': '2560x1440', 'preset': 'low', 'antialiasing': 'taa', 'avg_fps': '117.0', 'min_fps': '117.0', 'max_fps': '117.0', 'iterations': '1'}
+{'resolution': '2560x1440', 'preset': 'medium', 'antialiasing': 'taa', 'avg_fps': '109.0', 'min_fps': '109.0', 'max_fps': '109.0', 'iterations': '1'}
+{'resolution': '2560x1440', 'preset': 'high', 'antialiasing': 'taa', 'avg_fps': '98.0', 'min_fps': '98.0', 'max_fps': '98.0', 'iterations': '1'}
+{'resolution': '2560x1440', 'preset': 'ultrahigh', 'antialiasing': 'taa', 'avg_fps': '77.0', 'min_fps': '77.0', 'max_fps': '77.0', 'iterations': '1'}
+{'resolution': '3840x2160', 'preset': 'ultralow', 'antialiasing': 'taa', 'avg_fps': '81.0', 'min_fps': '81.0', 'max_fps': '81.0', 'iterations': '1'}
+{'resolution': '3840x2160', 'preset': 'low', 'antialiasing': 'taa', 'avg_fps': '76.0', 'min_fps': '76.0', 'max_fps': '76.0', 'iterations': '1'}
+{'resolution': '3840x2160', 'preset': 'medium', 'antialiasing': 'taa', 'avg_fps': '68.0', 'min_fps': '68.0', 'max_fps': '68.0', 'iterations': '1'}
+{'resolution': '3840x2160', 'preset': 'high', 'antialiasing': 'taa', 'avg_fps': '62.0', 'min_fps': '62.0', 'max_fps': '62.0', 'iterations': '1'}
+{'resolution': '3840x2160', 'preset': 'ultrahigh', 'antialiasing': 'taa', 'avg_fps': '51.0', 'min_fps': '51.0', 'max_fps': '51.0', 'iterations': '1'}
+
+AMDVLK:
+{'resolution': '1920x1080', 'preset': 'ultralow', 'antialiasing': 'taa', 'avg_fps': '128.0', 'min_fps': '128.0', 'max_fps': '128.0', 'iterations': '1'}
+{'resolution': '1920x1080', 'preset': 'low', 'antialiasing': 'taa', 'avg_fps': '116.0', 'min_fps': '116.0', 'max_fps': '116.0', 'iterations': '1'}
+{'resolution': '1920x1080', 'preset': 'medium', 'antialiasing': 'taa', 'avg_fps': '111.0', 'min_fps': '111.0', 'max_fps': '111.0', 'iterations': '1'}
+{'resolution': '1920x1080', 'preset': 'high', 'antialiasing': 'taa', 'avg_fps': '97.0', 'min_fps': '97.0', 'max_fps': '97.0', 'iterations': '1'}
+{'resolution': '1920x1080', 'preset': 'ultrahigh', 'antialiasing': 'taa', 'avg_fps': '79.0', 'min_fps': '79.0', 'max_fps': '79.0', 'iterations': '1'}
+{'resolution': '2560x1440', 'preset': 'ultralow', 'antialiasing': 'taa', 'avg_fps': '125.0', 'min_fps': '125.0', 'max_fps': '125.0', 'iterations': '1'}
+{'resolution': '2560x1440', 'preset': 'low', 'antialiasing': 'taa', 'avg_fps': '114.0', 'min_fps': '114.0', 'max_fps': '114.0', 'iterations': '1'}
+{'resolution': '2560x1440', 'preset': 'medium', 'antialiasing': 'taa', 'avg_fps': '109.0', 'min_fps': '109.0', 'max_fps': '109.0', 'iterations': '1'}
+{'resolution': '2560x1440', 'preset': 'high', 'antialiasing': 'taa', 'avg_fps': '99.0', 'min_fps': '99.0', 'max_fps': '99.0', 'iterations': '1'}
+{'resolution': '2560x1440', 'preset': 'ultrahigh', 'antialiasing': 'taa', 'avg_fps': '77.0', 'min_fps': '77.0', 'max_fps': '77.0', 'iterations': '1'}
+{'resolution': '3840x2160', 'preset': 'ultralow', 'antialiasing': 'taa', 'avg_fps': '85.0', 'min_fps': '85.0', 'max_fps': '85.0', 'iterations': '1'}
+{'resolution': '3840x2160', 'preset': 'low', 'antialiasing': 'taa', 'avg_fps': '80.0', 'min_fps': '80.0', 'max_fps': '80.0', 'iterations': '1'}
+{'resolution': '3840x2160', 'preset': 'medium', 'antialiasing': 'taa', 'avg_fps': '71.0', 'min_fps': '71.0', 'max_fps': '71.0', 'iterations': '1'}
+{'resolution': '3840x2160', 'preset': 'high', 'antialiasing': 'taa', 'avg_fps': '66.0', 'min_fps': '66.0', 'max_fps': '66.0', 'iterations': '1'}
+{'resolution': '3840x2160', 'preset': 'ultrahigh', 'antialiasing': 'taa', 'avg_fps': '54.0', 'min_fps': '54.0', 'max_fps': '54.0', 'iterations': '1'}
