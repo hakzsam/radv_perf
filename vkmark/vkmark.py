@@ -54,9 +54,9 @@ class Vkmark(Benchmark):
         results = {}
         results['app'] = str(self.name)
         results['resolution'] = str(self._resolution)
-        results['avg_fps'] = str(self.get_avg_score())
-        results['min_fps'] = str(self.get_min_score())
-        results['max_fps'] = str(self.get_max_score())
+        results['avg_score'] = str(self.get_avg_score())
+        results['min_score'] = str(self.get_min_score())
+        results['max_score'] = str(self.get_max_score())
         results['iterations'] = str(self._iterations)
         return results
 
