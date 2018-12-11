@@ -1,6 +1,7 @@
 #!/bin/python
 
 import argparse
+import json
 import os
 import sys
 
@@ -56,7 +57,7 @@ class Dota2(Benchmark):
         return results
 
     def print_results(self):
-        print(self.get_results())
+        print(json.dumps(self.get_results()))
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Dota2 benchmark")

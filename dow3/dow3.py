@@ -2,6 +2,7 @@
 
 import argparse
 import os
+import json
 import shutil
 import sys
 
@@ -83,7 +84,7 @@ class DOW3(Benchmark):
         return results
 
     def print_results(self):
-        print(self.get_results())
+        print(json.dumps(self.get_results()))
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Dawn of War III benchmark")

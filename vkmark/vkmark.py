@@ -1,6 +1,7 @@
 #!/bin/python
 
 import argparse
+import json
 import os
 import sys
 
@@ -61,7 +62,7 @@ class Vkmark(Benchmark):
         return results
 
     def print_results(self):
-        print(self.get_results())
+        print(json.dumps(self.get_results()))
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Vkmark benchmark")
