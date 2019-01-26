@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./vkmark.py --resolution=3840x2160
+./vkmark.py --iterations=3 --resolution=3840x2160
