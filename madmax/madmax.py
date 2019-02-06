@@ -57,10 +57,10 @@ class MadMax(Benchmark):
 
     def get_fps(self):
         fps = {}
-        fps["scene_1"] = self.get_fps_for_scene("1")
-        fps["scene_2"] = self.get_fps_for_scene("2")
-        fps["scene_3"] = self.get_fps_for_scene("3")
-        fps["scene_4"] = self.get_fps_for_scene("4")
+        fps["camp-hollow"] = self.get_fps_for_scene("1")
+        fps["stronghold"] = self.get_fps_for_scene("2")
+        fps["hope-glory"] = self.get_fps_for_scene("3")
+        fps["landmover"] = self.get_fps_for_scene("4")
         return fps
 
     def print_result(self, scene):
@@ -85,10 +85,10 @@ class MadMax(Benchmark):
         print(result)
 
     def print_results(self):
-        self.print_result("scene_1")
-        self.print_result("scene_2")
-        self.print_result("scene_3")
-        self.print_result("scene_4")
+        self.print_result("camp-hollow")
+        self.print_result("stronghold")
+        self.print_result("hope-glory")
+        self.print_result("landmover")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Mad Max benchmark")
