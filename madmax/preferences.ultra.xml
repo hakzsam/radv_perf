@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registry>
+    <key name="HKEY_CLASSES_ROOT">
+    </key>
+    <key name="HKEY_CURRENT_CONFIG">
+    </key>
+    <key name="HKEY_CURRENT_USER">
+        <key name="Software">
+            <key name="Feral Interactive">
+                <key name="Mad Max">
+                    <key name="Setup">
+                        <value name="AddSteamCloudAlias" type="integer">1</value>
+                        <value name="AdjustResolution" type="integer">0</value>
+                        <value name="AllowPausing" type="integer">1</value>
+                        <value name="ConstrainLiveWindowResize" type="integer">1</value>
+                        <value name="DefaultPreset" type="integer">0</value>
+                        <value name="DefaultVSync" type="integer">0</value>
+                        <value name="DisableMomentumScrolling" type="integer">1</value>
+                        <value name="DoneMinOS" type="integer">0</value>
+                        <value name="DonePromotional" type="integer">0</value>
+                        <value name="DoneUnsupported" type="integer">0</value>
+                        <value name="EnableFeralNetNotificationSounds" type="integer">0</value>
+                        <value name="FeralUIResolutionWarningThreshold" type="integer">3686400</value>
+                        <value name="FullScreen" type="integer">1</value>
+                        <value name="GameDestroysWindow" type="integer">0</value>
+                        <value name="GameOptionsDialogLastTab" type="integer">20000</value>
+                        <value name="GameOptionsDialogShouldShow" type="integer">0</value>
+                        <value name="GameOptionsDialogShouldShowBigPicture" type="integer">1</value>
+                        <value name="GameOptionsDialogShown" type="integer">1</value>
+                        <value name="GameSelected" type="integer">0</value>
+                        <value name="LiveWindowResizePercentage" type="integer">0</value>
+                        <value name="LiveWindowResizeThreshold" type="integer">0</value>
+                        <value name="MinWindowedHeight" type="integer">0</value>
+                        <value name="MinWindowedWidth" type="integer">0</value>
+                        <value name="PauseiTunes" type="integer">0</value>
+                        <value name="PauseMoviesOnPause" type="integer">1</value>
+                        <value name="PauseOnSuspend" type="integer">1</value>
+                        <value name="PauseSoundOnPause" type="integer">1</value>
+                        <value name="PauseTimersOnPause" type="integer">1</value>
+                        <value name="QuitClosesWindow" type="integer">1</value>
+                        <value name="RestoreMouseOnSuspend" type="integer">1</value>
+                        <value name="RestoreResOnSuspend" type="integer">1</value>
+                        <value name="RunEvenIfNotEnoughVRAM" type="integer">0</value>
+                        <value name="ScreenH" type="integer">1080</value>
+                        <value name="ScreenW" type="integer">1920</value>
+                        <value name="SeenSpecificationAlertUUIDDefaultHardwareSpecificationsClass" type="integer">1</value>
+                        <value name="SetiChatAway" type="integer">0</value>
+                        <value name="ShowAssertAlerts" type="integer">0</value>
+                        <value name="ShowTheHideDockCheckbox" type="integer">0</value>
+                        <value name="SoftwareUpdatedAskedUser" type="integer">1</value>
+                        <value name="SoftwareUpdatedCanCheck" type="integer">1</value>
+                        <value name="SpecificationLastUpdateCheckTime" type="binary">a0dd5a5c00000000</value>
+                        <value name="SpecificationUpdateURL" type="string">https://u1.feralinteractive.com/autoupdate/madmax/specifications_linux_1_1.xml</value>
+                        <value name="SpecificationURLBase" type="string">https://u1.feralinteractive.com/autoupdate/madmax</value>
+                        <value name="UpdateServerDomain" type="string">u1.feralinteractive.com</value>
+                        <value name="UpdateServerPath" type="string">/autoupdate/</value>
+                        <value name="UpdateServerProtocol" type="string">https://</value>
+                    </key>
+                </key>
+            </key>
+            <key name="IndirectX">
+                <key name="Direct3D">
+                    <key name="Config">
+                        <value name="AllowD3D1x" type="integer">1</value>
+                        <value name="AllowSM5" type="integer">1</value>
+                        <value name="FSAALevel" type="integer">0</value>
+                        <value name="PersistentlyMapNonUBOs" type="integer">1</value>
+                        <value name="PersistentlyMapUBOs" type="integer">1</value>
+                        <value name="UseFastDivByZero" type="integer">1</value>
+                        <value name="UseImmediateDiscard" type="integer">1</value>
+                        <value name="UseVulkan" type="integer">1</value>
+                    </key>
+                </key>
+                <key name="DirectDraw">
+                    <key name="Config">
+                        <value name="BlankAllScreens" type="integer">1</value>
+                    </key>
+                </key>
+                <key name="DirectInput">
+                    <key name="Config">
+                        <value name="ForceCustomHIDDeviceDirectInputEnumeration" type="integer">1</value>
+                    </key>
+                </key>
+            </key>
+            <key name="MacDoze">
+                <key name="Config">
+                    <value name="ExtraCommandLine" type="string"></value>
+                    <value name="ExtraCommandLineEnabled" type="integer">0</value>
+                    <value name="GameCannotQuit" type="integer">1</value>
+                </key>
+            </key>
+            <key name="OpenAutomate">
+                <key name="RegisteredApps">
+                    <key name="Publisher">
+                        <key name="Title">
+                            <key name="v1.0">
+                                <value name="ENTRY_EXE" type="string">C:\Feral\Program Files\WinDeveloper\WinApp.dll</value>
+                                <value name="INSTALL_DATETIME" type="string">2019-02-06 14:12:45</value>
+                                <value name="INSTALL_ROOT_PATH" type="string">C:\Feral\Program Files\WinDeveloper\</value>
+                                <value name="REGION" type="string">en_US</value>
+                            </key>
+                        </key>
+                    </key>
+                </key>
+            </key>
+        </key>
+    </key>
+    <key name="HKEY_LOCAL_MACHINE">
+        <key name="Software">
+        </key>
+    </key>
+    <key name="HKEY_USERS">
+    </key>
+</registry>
