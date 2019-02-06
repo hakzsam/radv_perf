@@ -43,6 +43,7 @@ class ROTR_antialiasing(Enum):
 
 class ROTR(Benchmark):
     def __init__(self, resolution, preset, antialiasing, iterations):
+        Benchmark.__init__(self, "RotTR")
         self._game_path = os.environ['HOME'] + "/work/Steam/steamapps/common/Rise of the Tomb Raider/"
         self._conf_path = os.environ['HOME'] + "/.local/share/feral-interactive/Rise of the Tomb Raider/"
         self._resolution = resolution
@@ -97,9 +98,9 @@ class ROTR(Benchmark):
     def bench(self):
         for i in range(0, self._iterations):
             self.run()
-            self._fps.append(self._get_fps())
+            self._fps.append(self.get_fps())
 
-    def _get_fps_for_scene(self, name):
+    def get_fps_for_scene(self, name):
         log_path = self._conf_path + "VFS/User/AppData/Roaming/Rise of the Tomb Raider/"
         all_files = glob.glob(log_path + "/" + name + "_*")
         list_of_files = []
@@ -112,25 +113,43 @@ class ROTR(Benchmark):
         with open(latest_file, 'r') as f:
             for line in f.readlines():
                 if "Average FPS:" in line:
-                    return re.search("Average FPS: (.*)", line).group(1)
+                    value = re.search("Average FPS: (.*)", line).group(1)
+                    return round_fps(value)
         return 0
 
-    def _get_fps(self):
+    def get_fps(self):
         fps = {}
-        fps["SpineOfTheMountain"] = self._get_fps_for_scene("SpineOfTheMountain")
-        fps["ProphetsTomb"] = self._get_fps_for_scene("ProphetsTomb")
-        fps["GeothermalValley"] = self._get_fps_for_scene("GeothermalValley")
+        fps["mountain"] = self.get_fps_for_scene("SpineOfTheMountain")
+        fps["tomb"] = self.get_fps_for_scene("ProphetsTomb")
+        fps["valley"] = self.get_fps_for_scene("GeothermalValley")
         return fps
 
+    def print_result(self, scene):
+        # Compute avg, min and max for this scene.
+        fps = []
+        for data in self._fps:
+            fps.append(data[scene])
+        min_fps = min(fps)
+        max_fps = max(fps)
+        avg_fps = sum(fps) / self._iterations
+
+        # Print result for this scene.
+        result = {}
+        result['app'] = str(self.name)
+        result['resolution'] = str(self._resolution)
+        result['preset'] = str(self._preset)
+        result['antialiasing'] = str(self._antialiasing)
+        result['scene'] = str(scene)
+        result['avg_fps'] = str(avg_fps)
+        result['min_fps'] = str(min_fps)
+        result['max_fps'] = str(max_fps)
+        result['interations'] = str(self._iterations)
+        print(result)
+
     def print_results(self):
-        results = {}
-        results['app'] = str(self.name)
-        results['resolution'] = str(self._resolution)
-        results['preset'] = str(self._preset)
-        results['antialiasing'] = str(self._antialiasing)
-        results['interations'] = str(self._iterations)
-        print(results)
-        print(self._fps)
+        self.print_result("mountain")
+        self.print_result("tomb")
+        self.print_result("valley")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Rise Of The Tomb Raider benchmark")
