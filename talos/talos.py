@@ -31,6 +31,12 @@ class Talos(Benchmark):
         self._iterations = iterations
         self._fps = []
 
+    def cleanup(self):
+        # Cleanup in case the game didn't exit properly last time.
+        lock = self._game_path + "/Temp/run.txt"
+        if os.path.isfile(lock):
+            os.remove(lock)
+
     def get_config_file(self):
         dirname = os.path.dirname(os.path.realpath(__file__))
         return dirname + "/Talos.ini"
@@ -103,6 +109,7 @@ if __name__ == "__main__":
 
     talos = Talos(args.api, args.resolution, args.iterations)
     talos.install()
+    talos.cleanup()
     if args.dry_run:
         talos.run() # For compiling pipelines
     talos.bench()

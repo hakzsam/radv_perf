@@ -27,6 +27,12 @@ class Sam2017(Benchmark):
         self._iterations = iterations
         self._fps = []
 
+    def cleanup(self):
+        # Cleanup in case the game didn't exit properly last time.
+        lock = self._game_path + "/Temp/run.txt"
+        if os.path.isfile(lock):
+            os.remove(lock)
+
     def get_config_file(self):
         dirname = os.path.dirname(os.path.realpath(__file__))
         return dirname + "/SeriousSam2017.ini"
@@ -101,6 +107,7 @@ if __name__ == "__main__":
     args = parser.parse_args(sys.argv[1:])
 
     sam2017 = Sam2017(args.resolution, args.iterations)
+    sam2017.cleanup()
     sam2017.install()
     if args.dry_run:
         sam2017.run() # For compiling pipelines
