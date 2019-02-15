@@ -21,7 +21,7 @@ class Sam2017(Benchmark):
     def __init__(self, resolution, iterations):
         Benchmark.__init__(self, "Sam2017")
         self._game_path = os.environ['HOME'] + "/work/Steam/steamapps/common/Serious Sam Fusion 2017"
-        self._demo_file = os.environ['HOME'] + "/pts-tfe-fusion-run.lua"
+        self._demo_file = os.path.dirname(os.path.realpath(__file__)) + "/bench.lua"
         self._conf_path = os.environ['HOME'] + "/work/Steam/userdata/327368460/564310/local/"
         self._resolution = resolution
         self._iterations = iterations
