@@ -93,7 +93,7 @@ class MadMax(Benchmark):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Mad Max benchmark")
     parser.add_argument('--iterations', type=int, default=3)
-    parser.add_argument('--dry-run', type=bool, default=True)
+    parser.add_argument('--dry-run', type=int, default=1)
     parser.add_argument('--resolution', type=str, default='1920x1080',
                         choices=['1920x1080', '2560x1440', '3840x2160'])
     args = parser.parse_args(sys.argv[1:])

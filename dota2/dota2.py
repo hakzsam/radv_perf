@@ -62,7 +62,7 @@ class Dota2(Benchmark):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Dota2 benchmark")
     parser.add_argument('--iterations', type=int, default=3)
-    parser.add_argument('--dry-run', type=bool, default=True)
+    parser.add_argument('--dry-run', type=int, default=1)
     args = parser.parse_args(sys.argv[1:])
 
     dota2 = Dota2(args.iterations)

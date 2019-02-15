@@ -93,7 +93,7 @@ class Talos(Benchmark):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="The Talos Principale benchmark")
     parser.add_argument('--iterations', type=int, default=3)
-    parser.add_argument('--dry-run', type=bool, default=True)
+    parser.add_argument('--dry-run', type=int, default=1)
     parser.add_argument('--api', type=Talos_api,
                         default=Talos_api.VULKAN,
                         choices=list(Talos_api))

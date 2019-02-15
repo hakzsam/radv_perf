@@ -89,7 +89,7 @@ class DOW3(Benchmark):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Dawn of War III benchmark")
     parser.add_argument('--iterations', type=int, default=3)
-    parser.add_argument('--dry-run', type=bool, default=True)
+    parser.add_argument('--dry-run', type=int, default=1)
     parser.add_argument('--preset', type=DOW3_preset,
                         default=DOW3_preset.ULTRA,
                         choices=list(DOW3_preset))
