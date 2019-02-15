@@ -24,7 +24,7 @@ class Talos(Benchmark):
     def __init__(self, api, resolution, iterations):
         Benchmark.__init__(self, "Talos")
         self._game_path = os.environ['HOME'] + "/.steam/steam/steamapps/common/The Talos Principle"
-        self._demo_file = os.environ['HOME'] + "/talos-run-test.lua"
+        self._demo_file = os.path.dirname(os.path.realpath(__file__)) + "/bench.lua"
         self._conf_path = os.environ['HOME'] + "/.steam/steam/userdata/327368460/257510/local/"
         self._api = api
         self._resolution = resolution
