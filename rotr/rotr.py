@@ -86,10 +86,18 @@ class ROTR(Benchmark):
         os.chdir(self._game_path)
         cmd = ["./RiseOfTheTombRaider.sh"]
         proc = self.run_process(cmd)
-        # Wait to be sure the application is started.
-        self.run_process(["sleep", "5"])
-        # Get PID.
-        pid = getpid("RiseOfTheTombRaider")
+
+        # Wait until the application is started (timeout is 15s).
+        timeout = 15
+        while timeout:
+            try:
+                pid = getpid("RiseOfTheTombRaider")
+                break;
+            except:
+                pass
+            time.sleep(1)
+            timeout -= 1
+
         # Wait until the process is done.
         while os.path.exists("/proc/%s" % str(pid)):
             time.sleep(1)
