@@ -10,3 +10,4 @@ cd vkmark && ./vkmark.sh && cd ..
 cd sam2017 && ./sam2017.sh && cd ..
 cd rotr && ./rotr.sh && cd ..
 cd madmax && ./madmax.sh && cd ..
+cd brigade && ./brigade.sh && cd ..
