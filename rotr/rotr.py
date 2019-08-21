@@ -41,10 +41,10 @@ class ROTR_antialiasing(Enum):
     def __str__(self):
         return self.value
 
-class ROTR(Benchmark):
+class ROTR(SteamBenchmark):
     def __init__(self, resolution, preset, antialiasing, iterations):
-        Benchmark.__init__(self, "RotTR")
-        self._game_path = os.environ['HOME'] + "/work/Steam/steamapps/common/Rise of the Tomb Raider/"
+        SteamBenchmark.__init__(self, "RotTR")
+        self._game_path = self._steam_dir + "/steamapps/common/Rise of the Tomb Raider/"
         self._conf_path = os.environ['HOME'] + "/.local/share/feral-interactive/Rise of the Tomb Raider/"
         self._resolution = resolution
         self._preset = preset.value

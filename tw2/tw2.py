@@ -30,10 +30,10 @@ class TW2_scene(Enum):
     def __str__(self):
             return self.value
 
-class TW2(Benchmark):
+class TW2(SteamBenchmark):
     def __init__(self, resolution, preset, scene, iterations):
-        Benchmark.__init__(self, "TW2")
-        self._game_path = os.environ['HOME'] + "/work/Steam/steamapps/common/Total War WARHAMMER II"
+        SteamBenchmark.__init__(self, "TW2")
+        self._game_path = self._steam_dir + "/steamapps/common/Total War WARHAMMER II"
         self._conf_path = os.environ['HOME'] + "/.local/share/feral-interactive/Total War WARHAMMER II/"
         self._log_path = self._conf_path + "/SaveData/Steam Saves (327368460)/benchmarks"
         self._resolution = resolution

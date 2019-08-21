@@ -40,3 +40,9 @@ class Benchmark:
 
     def get_name(self):
         return self.name
+
+class SteamBenchmark(Benchmark):
+    def __init__(self, name):
+        Benchmark.__init__(self, name)
+        assert('STEAM_DIR' in os.environ)
+        self._steam_dir = os.environ['STEAM_DIR']

@@ -13,9 +13,6 @@ from enum import Enum
 from Benchmark import *
 from Util import *
 
-STEAM_DIR = os.environ['HOME'] + "/work/Steam"
-#STEAM_DIR = os.environ['HOME'] + "/.steam/steam"
-
 ##
 # Strange Brigade benchmark.
 ##
@@ -27,11 +24,11 @@ class Brigade_preset(Enum):
     def __str__(self):
         return self.value
 
-class Brigade(Benchmark):
+class Brigade(SteamBenchmark):
     def __init__(self, proton, resolution, preset, iterations):
-        Benchmark.__init__(self, "Strange Brigade")
-        self._game_path = STEAM_DIR + "/steamapps/common/StrangeBrigade"
-        self._conf_path = STEAM_DIR + "/steamapps/compatdata/312670"
+        SteamBenchmark.__init__(self, "Strange Brigade")
+        self._game_path = self._steam_dir + "/steamapps/common/StrangeBrigade"
+        self._conf_path = self._steam_dir + "/steamapps/compatdata/312670"
         self._proton = proton
         self._preset = preset.value
         self._resolution = resolution
@@ -58,7 +55,7 @@ class Brigade(Benchmark):
         olddir = os.getcwd()
         os.chdir(self._game_path + "/bin")
 
-        proton_dir = STEAM_DIR + '/steamapps/common/Proton %s/' % self._proton
+        proton_dir = self._steam_dir + '/steamapps/common/Proton %s/' % self._proton
         cmd = [proton_dir + 'proton', 'run', './StrangeBrigade_Vulkan.exe', '-skipdrivercheck', '-noHDR', '-benchmark']
         os.environ['STEAM_COMPAT_DATA_PATH'] = self._conf_path
         os.environ['SteamAppId'] = str(312670)

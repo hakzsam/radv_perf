@@ -17,12 +17,12 @@ def getpid(name):
 # Serious Sam 2017 benchmark.
 ##
 
-class Sam2017(Benchmark):
+class Sam2017(SteamBenchmark):
     def __init__(self, resolution, iterations):
-        Benchmark.__init__(self, "Sam2017")
-        self._game_path = os.environ['HOME'] + "/work/Steam/steamapps/common/Serious Sam Fusion 2017"
+        SteamBenchmark.__init__(self, "Sam2017")
+        self._game_path = self._steam_dir + "/steamapps/common/Serious Sam Fusion 2017"
         self._demo_file = os.path.dirname(os.path.realpath(__file__)) + "/bench.lua"
-        self._conf_path = os.environ['HOME'] + "/work/Steam/userdata/327368460/564310/local/"
+        self._conf_path = self._steam_dir + "/userdata/327368460/564310/local/"
         self._resolution = resolution
         self._iterations = iterations
         self._fps = []

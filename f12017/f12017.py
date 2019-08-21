@@ -31,10 +31,10 @@ class F12017_antialiasing(Enum):
     def __str__(self):
         return self.value
 
-class F12017(Benchmark):
+class F12017(SteamBenchmark):
     def __init__(self, resolution, preset, antialiasing, iterations):
-        Benchmark.__init__(self, "F12017")
-        self._game_path = os.environ['HOME'] + "/work/Steam/steamapps/common/F1 2017"
+        SteamBenchmark.__init__(self, "F12017")
+        self._game_path = self._steam_dir + "/steamapps/common/F1 2017"
         self._conf_path = os.environ['HOME'] + "/.local/share/feral-interactive/F1 2017/"
         self._log_path = self._conf_path + "SaveData/feral_bench"
         self._resolution = resolution

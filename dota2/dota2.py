@@ -12,10 +12,10 @@ from Benchmark import *
 ##
 # Dota2 benchmark.
 ##
-class Dota2(Benchmark):
+class Dota2(SteamBenchmark):
     def __init__(self, iterations):
-        Benchmark.__init__(self, "Dota2")
-        self._game_path = os.environ['HOME'] + "/work/Steam/steamapps/common/dota 2 beta"
+        SteamBenchmark.__init__(self, "Dota2")
+        self._game_path = self._steam_dir + "/steamapps/common/dota 2 beta"
         self._iterations = iterations
         self._fps = []
 

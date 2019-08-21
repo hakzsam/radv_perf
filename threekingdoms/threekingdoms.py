@@ -24,10 +24,10 @@ class ThreeKingdoms_preset(Enum):
     def __str__(self):
         return self.value
 
-class ThreeKingdoms(Benchmark):
+class ThreeKingdoms(SteamBenchmark):
     def __init__(self, resolution, preset, iterations):
-        Benchmark.__init__(self, "ThreeKingdoms")
-        self._game_path = os.environ['HOME'] + "/work/Steam/steamapps/common/Total War THREE KINGDOMS"
+        SteamBenchmark.__init__(self, "ThreeKingdoms")
+        self._game_path = self._steam_dir + "/steamapps/common/Total War THREE KINGDOMS"
         self._conf_path = os.environ['HOME'] + "/.local/share/feral-interactive/Three Kingdoms/"
         self._log_path = self._conf_path + "/VFS/User/AppData/Roaming/The Creative Assembly/ThreeKingdoms/benchmarks/"
         self._resolution = resolution

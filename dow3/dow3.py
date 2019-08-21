@@ -23,10 +23,10 @@ class DOW3_preset(Enum):
     def __str__(self):
         return self.value
 
-class DOW3(Benchmark):
+class DOW3(SteamBenchmark):
     def __init__(self, preset, iterations):
-        Benchmark.__init__(self, "DOW3")
-        self._game_path = os.environ['HOME'] + "/work/Steam/steamapps/common/Dawn of War III"
+        SteamBenchmark.__init__(self, "DOW3")
+        self._game_path = self._steam_dir + "/steamapps/common/Dawn of War III"
         self._conf_path = os.environ['HOME'] + "/.local/share/feral-interactive/Dawn of War III/"
         self._log_path = self._conf_path + "VFS/User/AppData/Roaming/My Games/Dawn of War III/LogFiles/"
         self._preset = str(preset)

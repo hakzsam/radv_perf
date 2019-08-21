@@ -13,8 +13,6 @@ from enum import Enum
 from Benchmark import *
 from Util import *
 
-STEAM_DIR = os.environ['HOME'] + "/work/Steam"
-
 ##
 # GTAV benchmark.
 ##
@@ -25,11 +23,11 @@ class GTAV_preset(Enum):
     def __str__(self):
         return self.value
 
-class GTAV(Benchmark):
+class GTAV(SteamBenchmark):
     def __init__(self, proton, resolution, preset, iterations):
-        Benchmark.__init__(self, "GTAV")
-        self._game_path = STEAM_DIR + "/steamapps/common/Grand Theft Auto V"
-        self._conf_path = STEAM_DIR + "/steamapps/compatdata/271590"
+        SteamBenchmark.__init__(self, "GTAV")
+        self._game_path = self._steam_dir + "/steamapps/common/Grand Theft Auto V"
+        self._conf_path = self._steam_dir + "/steamapps/compatdata/271590"
         self._proton = proton
         self._preset = preset
         self._resolution = resolution
@@ -121,7 +119,7 @@ class GTAV(Benchmark):
         olddir = os.getcwd()
         os.chdir(self._game_path)
 
-        proton_dir = STEAM_DIR + '/steamapps/common/Proton %s/' % self._proton
+        proton_dir = self._steam_dir + '/steamapps/common/Proton %s/' % self._proton
         cmd = [proton_dir + 'proton', 'run', './GTAVLauncher.exe',
                '-benchmark',
                '-DX11',

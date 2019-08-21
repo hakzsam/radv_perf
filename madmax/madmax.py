@@ -13,10 +13,10 @@ from Benchmark import *
 ##
 # Mad Max benchmark.
 ##
-class MadMax(Benchmark):
+class MadMax(SteamBenchmark):
     def __init__(self, resolution, iterations):
-        Benchmark.__init__(self, "MadMax")
-        self._game_path = os.environ['HOME'] + "/work/Steam/steamapps/common/Mad Max"
+        SteamBenchmark.__init__(self, "MadMax")
+        self._game_path = self._steam_dir + "/steamapps/common/Mad Max"
         self._conf_path = os.environ['HOME'] + "/.local/share/feral-interactive/Mad Max/"
         self._log_path = os.environ['HOME'] + "/.local/share/feral-interactive/Mad Max/VFS/User/AppData/Roaming/WB Games/Mad Max/FeralBenchmark"
         self._resolution = resolution

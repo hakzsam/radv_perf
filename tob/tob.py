@@ -25,10 +25,10 @@ class ToB_preset(Enum):
     def __str__(self):
         return self.value
 
-class ToB(Benchmark):
+class ToB(SteamBenchmark):
     def __init__(self, resolution, preset, iterations):
-        Benchmark.__init__(self, "ToB")
-        self._game_path = os.environ['HOME'] + "/work/Steam/steamapps/common/Total War Saga Thrones of Britannia"
+        SteamBenchmark.__init__(self, "ToB")
+        self._game_path = self._steam_dir + "/steamapps/common/Total War Saga Thrones of Britannia"
         self._conf_path = os.environ['HOME'] + "/.local/share/feral-interactive/Thrones of Britannia/"
         self._log_path = self._conf_path + "VFS/User/AppData/Roaming/The Creative Assembly/ThronesofBritannia/benchmarks/"
         self._resolution = resolution
