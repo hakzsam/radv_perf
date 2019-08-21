@@ -22,7 +22,7 @@ class Dota2(Benchmark):
     def run(self):
         olddir = os.getcwd()
         os.chdir(self._game_path + "/game")
-        self.run_process(["./dota.sh", "+con_logfile \$LOG_FILE +timedemoquit dota2-pts-1971360796 +demo_quitafterplayback 1 +cl_showfps 2 +fps_max 0 -nosound -noassert -console -fullscreen +timedemo_start 50000 +timedemo_end 51000 -autoconfig_level 3 -testscript_inline \\\"Test_WaitForCheckPoint DemoPlaybackFinished\; quit\\\" -vulkan"])
+        self.run_process("./dota.sh +con_logfile \$LOG_FILE +timedemoquit dota2-pts-1971360796 +demo_quitafterplayback 1 +cl_showfps 2 +fps_max 0 -nosound -noassert -console -fullscreen +timedemo_start 50000 +timedemo_end 51000 -autoconfig_level 3 -testscript_inline \\\"Test_WaitForCheckPoint DemoPlaybackFinished\; quit\\\" -vulkan".split(' '))
         os.chdir(olddir)
 
     def bench(self):
@@ -34,7 +34,7 @@ class Dota2(Benchmark):
         log_file = self._game_path + "/game/dota/Source2Bench.csv"
         with open(log_file) as f:
             data = f.readlines()
-        lastline = data[-1]
+        lastline = data[-2]
         data = lastline.split(',')
         return float(data[2])
 
